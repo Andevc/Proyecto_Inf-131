@@ -1,6 +1,9 @@
 # Proyecto de Aplicacion de los numeros primos 
 Generacion de Claves RSA
 
+![Stared](/Data/Inicio.png)
+![Generate](/Data/Generado.png)
+
 ---------------------------------------------------
 ### Main()
 
