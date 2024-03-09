@@ -1,0 +1,265 @@
+﻿<Window x:Class="Proyecto_Inf_131.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_Inf_131"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"        
+        Title="Generador de Claves RSA" Height="580" Width="450">
+    <Border>
+        <Border.Background>
+            <ImageBrush ImageSource="/assets/bg-main.png"
+                        Stretch="Fill"
+                        AlignmentX="Center"
+                        AlignmentY="Center">
+            </ImageBrush>
+        </Border.Background>
+
+        <Border CornerRadius="30" 
+                Margin="40"
+                Background="#fefefe">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="50"
+                                  Opacity="0.8"
+                                  ShadowDepth="7"
+                                  Direction="-45"/>
+            </Border.Effect>
+            <Grid   Margin="20,40,20,20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition />
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Image Grid.Row="0"
+                           Source="/assets/key.png"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" Width="70"
+                           />
+                    <TextBlock Grid.Row="1"
+                               Foreground="#151515"
+                               Text="Generador de Calves RSA"
+                               FontSize="25"
+                               FontFamily="Roboto"
+                               FontWeight="Bold"
+                               TextWrapping="WrapWithOverflow"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Top" 
+                               Width="260" 
+           
+                               >
+
+                    </TextBlock>
+                </Grid>
+                
+                <Grid Grid.Row="1" Margin="0,10,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="Ingrese 5 digitos en P y Q"
+                               FontFamily="Roboto"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Foreground="#1e1e1e"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"/>
+                    
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <StackPanel Grid.Column="0"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            
+                            <TextBlock Text="P: "
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       FontFamily="Roboto"/>
+                            
+                            <TextBox x:Name="NprimoP"
+                                     Width="100"
+                                     Background="Transparent"
+                                     Foreground="Black"
+                                     CaretBrush="#151515"
+                                     BorderBrush="#1C1D24"
+                                     BorderThickness="0,0,0,1"
+                                     VerticalContentAlignment="Center"
+                                     FontFamily="Roboto"
+                                     MaxLength="5"
+                                     Padding="3,0,0,0"
+                                     />
+
+                        </StackPanel>
+                        <StackPanel Grid.Column="1"
+                                    Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center">
+                            
+                            <TextBlock Text="Q: "
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       FontFamily="Roboto"/>
+
+                            <TextBox x:Name="NprimoQ"
+                                     Width="100"
+                                     Background="Transparent"
+                                     Foreground="Black"
+                                     CaretBrush="#151515"
+                                     BorderBrush="#1C1D24"
+                                     BorderThickness="0,0,0,1"
+                                     VerticalContentAlignment="Center"
+                                     FontFamily="Roboto"
+                                     MaxLength="5"
+                                     Padding="3,0,0,0"
+                                     />
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0"
+                                    Margin="20, 5"
+                                    Orientation="Vertical"
+                                    >
+                            <TextBlock Text="Clave Publica:"
+                                       FontFamily="Roboto"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       Foreground="#1e1e1e"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left">
+                                
+                            </TextBlock>
+
+                            <TextBlock x:Name="PublicKey"
+                                       Height="auto"
+                                       TextWrapping="WrapWithOverflow"
+                                       FontFamily="Roboto"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       Padding="0,5"
+                                       />
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"
+                                    Margin="20, 5"
+                                    Orientation="Vertical"
+                                    >
+                            <TextBlock Text="Clave Privada:"
+                                       FontFamily="Roboto"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       Foreground="#1e1e1e"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"/>
+
+                            <TextBlock x:Name="PrivateKey"
+                                       Height="auto"
+                                       TextWrapping="WrapWithOverflow"
+                                       FontFamily="Roboto"
+                                       FontSize="15"
+                                       FontWeight="SemiBold"
+                                       Padding="0,5" />
+
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+                            x:Name="btnStart"
+                            Content="Gegerar"
+                            Height="50"
+                            Width="140"
+                            Cursor="Hand"
+                            Foreground="#fff"
+                            FontSize="20"
+                            FontWeight="SemiBold"
+                            FontFamily="Roboto"
+                            Click="GenerateKey"
+                            >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#151515" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#00a4f7"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="15"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+
+                    <Button Grid.Column="1"
+                            x:Name="btnClear"
+                            Content="Limpiar"
+                            Height="50"
+                            Width="140"
+                            Cursor="Hand"
+                            Foreground="#fff"
+                            FontSize="20"
+                            FontWeight="SemiBold"
+                            FontFamily="Roboto"
+                            Click="ClearScreen"
+                            >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#151515" />
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#00a4f7"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="15"
+                                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                    </Button>
+                </Grid>
+                
+            </Grid>
+        </Border>
+    </Border>
+</Window>
