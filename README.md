@@ -1,5 +1,5 @@
 # Proyecto de Aplicacion de los numeros primos 
-Generacion de Claves RSA
+Generacion de Claves RSA - (Para Ejecutarlo se necesita .NET Framework 4.8)
 
 ![Stared](/Data/Inicio.png)
 ![Generate](/Data/Generado.png)
