@@ -54,8 +54,11 @@
                                HorizontalAlignment="Center"
                                VerticalAlignment="Top" 
                                Width="260" 
-           
-                               ><Run Text="Generador de C"/><Run Language="es-es" Text="la"/><Run Text="ves RSA"/></TextBlock>
+                        
+                               >
+                        <Run Text="Generador de Claves RSA"/>
+                      
+                    </TextBlock>
                 </Grid>
                 
                 <Grid Grid.Row="1" Margin="0,10,0,0">
