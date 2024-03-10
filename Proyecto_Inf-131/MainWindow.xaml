@@ -46,7 +46,6 @@
                            />
                     <TextBlock Grid.Row="1"
                                Foreground="#151515"
-                               Text="Generador de Calves RSA"
                                FontSize="25"
                                FontFamily="Roboto"
                                FontWeight="Bold"
@@ -56,9 +55,7 @@
                                VerticalAlignment="Top" 
                                Width="260" 
            
-                               >
-
-                    </TextBlock>
+                               ><Run Text="Generador de C"/><Run Language="es-es" Text="la"/><Run Text="ves RSA"/></TextBlock>
                 </Grid>
                 
                 <Grid Grid.Row="1" Margin="0,10,0,0">
