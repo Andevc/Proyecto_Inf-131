@@ -190,7 +190,7 @@
                     </Grid.ColumnDefinitions>
                     <Button Grid.Column="0"
                             x:Name="btnStart"
-                            Content="Gegerar"
+                            Content="Generar"
                             Height="50"
                             Width="140"
                             Cursor="Hand"
